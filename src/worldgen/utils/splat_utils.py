@@ -1,8 +1,10 @@
 
 import numpy as np
 import torch
-from pytorch3d.transforms import matrix_to_quaternion
+# from pytorch3d.transforms import matrix_to_quaternion
+
 from plyfile import PlyData, PlyElement
+from .torch3d_utils import matrix_to_quaternion
 
 class SplatFile:
     def __init__(
@@ -48,6 +50,7 @@ class SplatFile:
 
         el = PlyElement.describe(elements, 'vertex')
         PlyData([el]).write(path)
+
 
 
 def convert_rgbd_to_gs(rgb, distance, rays, dis_threshold=0., epsilon=1e-3) -> SplatFile:

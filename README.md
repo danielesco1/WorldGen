@@ -123,7 +123,12 @@ o3d.io.write_triangle_mesh("path/to/your/output.ply", mesh) # Save mesh as a .pl
 # If want to use background inpainting feature, install iopaint
 pip install iopaint --no-dependencies
 ```
+# get submodules to run
+cd WorldGen
+git submodule add https://github.com/lpiccinelli-eth/UniK3D.git submodules/UniK3D
+git submodule update --init --recursive
 
+pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable"
 
 ## 🕹️ Demo with 3D Scene Visualization
 We provide a demo script to help you quickly get started and visualize the 3D scene in a web browser. The script is powered by [Viser](https://github.com/nerfstudio-project/viser).

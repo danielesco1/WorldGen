@@ -5,6 +5,9 @@ import imageio
 import numpy as np
 from PIL import Image
 
+import sys
+sys.path.append('./src')
+
 from typing import Optional, Union, Tuple
 from scipy.spatial.transform import Rotation as R
 from tqdm import tqdm
@@ -355,6 +358,9 @@ if __name__ == "__main__":
     if torch.cuda.get_device_properties(0).total_memory / (1024 ** 3) < 24:
         print("Detected GPU VRAM less than 24GB, setting low_vram to True")
         args.low_vram = True
-
+    import os
+    os.makedirs(args.output_dir, exist_ok=True)
+    print(f"Output directory: {args.output_dir}")
     server = ViserServer(args)
+   
     server.run()

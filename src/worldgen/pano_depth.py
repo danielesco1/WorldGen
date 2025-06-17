@@ -1,6 +1,8 @@
 import torch
 import numpy as np
 from PIL import Image
+import sys
+sys.path.append('./submodules/UniK3D')
 from unik3d.models import UniK3D
 from unik3d.utils.camera import Spherical
 

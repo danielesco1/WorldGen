@@ -1,0 +1,8 @@
+Collecting py360convert
+  Downloading py360convert-1.0.4-py3-none-any.whl.metadata (5.9 kB)
+Requirement already satisfied: numpy>=1.20.0 in /home/descobar/miniconda3/envs/worldgen/lib/python3.11/site-packages (from py360convert) (2.1.2)
+Requirement already satisfied: pillow>=6.0.0 in /home/descobar/miniconda3/envs/worldgen/lib/python3.11/site-packages (from py360convert) (11.0.0)
+Requirement already satisfied: scipy>=1.2.0 in /home/descobar/miniconda3/envs/worldgen/lib/python3.11/site-packages (from py360convert) (1.15.3)
+Downloading py360convert-1.0.4-py3-none-any.whl (15 kB)
+Installing collected packages: py360convert
+Successfully installed py360convert-1.0.4
